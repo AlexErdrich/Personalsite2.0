@@ -662,6 +662,7 @@ section .container {
   overflow: hidden;
   z-index: 1;
   background: rgba(0, 0, 0, 0.6);
+  min-height: 100px;
 }
 
 .portfolio .portfolio-wrap::before {
