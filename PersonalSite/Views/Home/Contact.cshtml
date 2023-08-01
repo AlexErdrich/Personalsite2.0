@@ -1,70 +1,61 @@
 ﻿@model PersonalSite.Models.ContactViewModel
 
 @{
-    ViewData["Title"] = "Contact";
+	ViewData["Title"] = "Contact";
 }
 
-z`
 
-<section id="contact" class="contact">
+
+<section id="contact" class="contact section-show">
 	<div class="container">
 
 		<div class="section-title">
 			<h2>Contact</h2>
 			<p>Contact Me</p>
 		</div>
-
-		
-
-		@*<form action="forms/contact.php" method="post" role="form" class="php-email-form mt-4">
-			<div class="row">
-				<div class="col-md-6 form-group">
-					<input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-				</div>
-				<div class="col-md-6 form-group mt-3 mt-md-0">
-					<input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-				</div>
-			</div>
-			<div class="form-group mt-3">
-				<input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-			</div>
-			<div class="form-group mt-3">
-				<textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-			</div>
-			<div class="my-3">
-				<div class="loading">Loading</div>
-				<div class="error-message"></div>
-				<div class="sent-message">Your message has been sent. Thank you!</div>
-			</div>
-			<div class="text-center"><button type="submit">Send Message</button></div>
-		</form>*@
-
 		<form asp-action="Contact" class="php-email-form mt-4">
 			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
 			<div class="row">
 				<div class="col-md-6 form-group">
-				<label asp-for="Name" class="control-label"></label>
+					<label asp-for="Name" class="control-label"></label>
 					<input asp-for="Name" class="form-control" name="name" id="name" placeholder="Your Name" />
-				<span asp-validation-for="Name" class="text-danger"></span>
-			</div>
+					<span asp-validation-for="Name" class="text-danger"></span>
+
+				</div>
+
 				<div class="col-md-6 form-group mt-3 mt-md-0">
-				<label asp-for="Email" class="control-label"></label>
+					<label asp-for="Email" class="control-label"></label>
 					<input asp-for="Email" class="form-control" name="email" id="email" placeholder="Your Email" />
-				<span asp-validation-for="Email" class="text-danger"></span>
+					<span asp-validation-for="Email" class="text-danger"></span>
+				</div>
+
 			</div>
-			</div>
+
 			<div class="form-group mt-3">
 				<label asp-for="Subject" class="control-label"></label>
 				<input asp-for="Subject" class="form-control" name="subject" id="subject" placeholder="Subject" />
 				<span asp-validation-for="Subject" class="text-danger"></span>
 			</div>
+
 			<div class="form-group mt-3">
 				<label asp-for="Message" class="control-label"></label>
 				<textarea asp-for="Message" class="form-control" name="message" rows="5" placeholder="Message"></textarea>
 				<span asp-validation-for="Message" class="text-danger"></span>
 			</div>
-			<div class="text-center"><button type="submit">Send Message</button></div>
-		</form>
 
+			<div class="text-center"><button type="submit"/>Send Message</div>
+
+		</form>
 	</div>
 </section>
+
+@section Scripts{
+	<script src="~/assets/js/jquery.min.js"></script>
+					
+	
+			<script>
+				$("#header").addClass("header-top")
+
+			</script>
+	}

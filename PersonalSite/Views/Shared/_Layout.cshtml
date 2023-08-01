@@ -53,10 +53,9 @@
 				<ul>
 					<li><a class="nav-link active" href="#header">Home</a></li>
 					<li><a class="nav-link" href="#about">About</a></li>
-					<li><a class="nav-link" href="#resume">Resume</a></li>
-					@*  <li><a class="nav-link" href="#services">Services</a></li>*@
+					<li><a class="nav-link" href="#resume">Resume</a></li>			
 					<li><a class="nav-link" href="#portfolio">Portfolio</a></li>
-					<li><a class="nav-link" href="#contact">Contact</a></li>
+					<li><a class="nav-link" asp-action="Contact" asp-controller="Home" >Contact</a></li>
 				</ul>
 				<i class="bi bi-list mobile-nav-toggle"></i>
 			</nav><!-- .navbar -->
@@ -221,7 +220,7 @@
 					<ul id="portfolio-flters">
 						<li data-filter="*" class="filter-active">All</li>
 						<li data-filter=".filter-app">App</li>
-						@*   <li data-filter=".filter-card">Card</li>*@
+					
 						<li data-filter=".filter-web">Web</li>
 					</ul>
 				</div>
@@ -308,10 +307,12 @@
 	<script src="~/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 	<script src="~/assets/vendor/swiper/swiper-bundle.min.js"></script>
 	<script src="~/assets/vendor/waypoints/noframework.waypoints.js"></script>
-	<script src="~/assets/vendor/php-email-form/validate.js"></script>
+	@*<script src="~/assets/vendor/php-email-form/validate.js"></script>*@
 
 	<!-- Template Main JS File -->
 	<script src="~/assets/js/main.js"></script>
+
+	@RenderSection("Scripts", false);`
 
 </body>
 
